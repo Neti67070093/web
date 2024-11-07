@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css') }}">
+    <title>Handsomeslip</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        transition: .5s;
+        scrollbar-width: none;
+        
+    }
+
+
+    .container {
+        gap: 0vh 40vh;
+        text-align: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        display: flex;
+        margin-left: -5vh;
+        background: linear-gradient(180deg, rgb(15, 15, 15) 0%, rgb(19, 19, 19) 100%, rgb(59, 59, 59) 100%);
+        height: 100vh;
+    }
+
+    .logo img {
+        width: 100%;
+        height: 100%;
+        animation: open 1s;
+    }
+
+    .container-text{
+        
+        text-align: left;
+        animation: open2 1s;
+    }
+
+    .container .text {
+        color: white;
+        display: flex;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 6vh;
+        font-weight: 700;
+    }
+
+    .text-des {
+        color: rgb(169, 108, 226);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 2vh;
+        font-weight: 700;
+        margin-left: 0.7vh;
+    }
+
+    a .btn{
+        background-color: unset;
+        margin-top: 2vh;
+        padding: .7vh 4vh;
+        border-radius: 1.7vh;
+        outline: 2px solid white;
+        color: white;
+        border: none;
+    }
+
+    .btn:hover {
+        background-color: rgb(169, 108, 226);
+        border-radius: 2vh;
+        transform: scale(1.1);
+        outline-offset: 3.5px;
+    }
+
+    .t1{
+        animation: text-head 2.5s;
+    }
+    .t2{
+        animation: text-head 3s;
+    }
+    .t3{
+        animation: text-head 3.5s;
+    }
+    .t4{
+        animation: text-head 4s;
+    }
+    .t5{
+        animation: text-head 4.5s;
+    }
+    .t6{
+        animation: text-head 5s;
+    }
+    .t7{
+        animation: text-head 5.5s;
+    }
+
+    @keyframes text-head {
+        from {
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+
+    @keyframes open{
+        from {
+            opacity: 0;
+            margin-right: -10vh;
+        }
+        to{
+            opacity: 1;
+            right: 0vh;
+        }
+    }
+
+    @keyframes open2{
+        from {
+            opacity: 0;
+            margin-left: -10vh;
+        }
+        to{
+            opacity: 1;
+            left: 0vh;
+        }
+    }
+
+</style>
+<body>
+    <div class="main"></div>
+    <nav>
+        
+    </nav>
+    <div class="container" >
+        <div class="logo">
+            <img src="/static/image/LOGOO.png" alt="">
+        </div>
+        <div class="container-text">
+            <div class="text">
+                <p class="t1">W</p>
+                <p class="t2">E</p>
+                <p class="t3">L</p>
+                <p class="t4">C</p>
+                <p class="t5">O</p>
+                <p class="t6">M</p>
+                <p class="t7">E</p>
+            </div>
+            <div class="text-des">
+                Handsome Slip
+            </div>
+            <a href="/main"><button class="btn">go</button></a>
+        </div>
+        
+    </div>
+</body>
+</html>

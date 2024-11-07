@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static\css\style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet">
+    
+    <title>Handsomeslip</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Chakra Petch', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .top p {
+            font-size: 30px;
+            flex: 1;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 50px;
+        }
+
+        a {
+            font-size: 18px;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 50px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #34495e;
+        }
+
+        .triangle { 
+        position: absolute;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid rgb(244, 26, 26);
+        transition: left 0.3s ease;
+        top: 60px; 
+        }
+
+
+        .top{
+            margin: 4;
+            padding: 100;
+        }
+
+        .top{
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .boxx {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .box {
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            border: 2px solid #2c3e50;
+            border-radius: 8px;
+        }
+
+        .box section {
+            margin-bottom: 20px;
+        }
+
+        .box section:last-child {
+            margin-bottom: 0;
+        }
+
+        .box input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+        }
+
+        .box input[type="submit"], .box input[type="reset"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #2c3e50;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .box input[type="submit"]:hover, .box input[type="reset"]:hover {
+            background-color: #34495e;
+        }
+
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 15%;
+        }
+
+        .team-member {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 22%;
+            margin-bottom: 20px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 100%;
+            height: 65%;
+            background-size: cover;
+        }
+
+        .team-member h3 {
+            margin: 16px 0 8px 0;
+        }
+
+        .team-member p {
+          color: #777;
+          padding: 0 16px;
+        }
+
+        .team-member button {
+            background-color: #f1f1f1;
+            border: none;
+            color: #333;
+            padding: 14px 16px;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 0 0 10px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .team-member button:hover {
+            background-color: #ddd;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            display: flex;
+            height: 7vh;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        #thai-time {
+            font-size: 1.5rem;
+            font-weight: bold;
+            position: sticky;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .team-info a {
+            width: 100%;
+            height: 100%;
+            margin-left: -20px;
+            padding: 14px 100% 14px 50%;
+        }
+
+        .img_it {
+            width: 70%;
+            height: 65%;
+            background-size: cover;
+        }
+
+        .img_s{
+            width: 100%;
+            align-items: center;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+        #countdown {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #d9534f;
+            text-align: center;
+        }
+        .allabout{
+            display: flex;
+            flex-direction: column;
+            gap: 5vh;
+        }
+        .add-button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #2c3e50;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-button:hover {
+            background-color: #34495e;
+        }
+
+        .fail{
+            color: red;
+            margin-bottom: 5px;
+        }
+
+        .f{
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .risk-box-container {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        .risk-box {
+            width: 10px;
+            height: 10px;
+            border-radius: 1px;
+            margin-right: 10px;
+        }
+
+        .red-box {
+           background-color: red;
+        }
+
+        .orange-box {
+            background-color: orange;
+        }
+
+        .box-label {
+            color: #333;
+            font-size: 1rem;
+        }
+
+    </style>
+</head>
+<body >
+    <form action="" method="POST" style="transition: .5s;">
+    
+        <nav>
+            <div class="logo">Handsomeslip</div>
+            <div id="thai-time"></div>
+            <div class="triangle" id="triangle"></div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <section id = "about" class="top">
+            <div class = "img_s">
+                <h1><img src="/static/image/it-kmitl.png" class = "img_it"></h1>
+            </div>
+        </section>
+
+        
+        <section class="top"> 
+            <div class="allabout">
+                <div class="about">
+                    <h1>About</h1>
+                    <p>     กลุ่มคณะผู้จัดทำ ได้ตระหนักถึงปัญหาว่าเพื่อนหลายคนไม่สามารถตัดสินใจในการเลือกที่จะถอนรายวิชาหรือเลือกที่จะอ่านหนังสือ
+                        เพื่อเพิ่มคะแนนรายวิชานั้นๆ และยังไม่เห็นภาพที่ชัดเจนของคะแนนรายวิชา จากปัญหาดังกล่าว 
+                        กลุ่มคณะผู้จัดทำจึงเกิดความคิดที่ต้องการมีเครื่องช่วยในการตัดสินใจ และให้นักศึกษาเห็นภาพ จากคะแนนของตัวเอง 
+                        เพื่อให้นักศึกษาสามารถตัดสินใจจาก กราฟคะแนนรายวิชาและคะแนนที่จะมีข้อความบอกว่าอยู่ในเกณฑ์ช่วงใด
+                    </p>
+                </div>
+                <div class="countdown" id="countdown"></div>
+            </div>
+        </section>
+
+        <div class="boxx">
+            <div class="box">
+                <section id="subject-container">
+                    <div class="subject-entry">
+                        <p>ชื่อวิชา:</p>
+                        <input type="text" name="subject[]" placeholder="ชื่อวิชา" required />
+                        <p>คะแนน:</p>
+                        <input type="text" name="cal[]" placeholder="คะแนน" min="0" max="100" required />
+                    </div>
+                </section>
+        
+                <section style="display: flex; gap: 5vh;">
+                    <button type="button" class="add-button" onclick="addSubject()">Add</button>
+                    <input type="submit" value="Submit" />
+                </section>
+            </div>
+        </div>
+
+        <section id="total-container">
+            <div class="image-container">
+                <img src="{{plot_url}}" alt="Plot">
+                <div class="alltotal" style="display: flex; flex-direction: column;">
+                    
+                    <p class="f" >รายวิชาที่มีความเสี่ยง
+                        <div class="risk-box-container">
+                            <div class="risk-box red-box"></div>
+                            <p class="box-label">สูงสุด</p>
+                        </div>
+                        <div class="risk-box-container">
+                            <div class="risk-box orange-box"></div>
+                            <p class="box-label">ต่ำ</p>
+                        </div>
+                    </p>
+
+                    {% for item in list_name %}
+                        <li class="fail">{{ item }}</li>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <div id="contact" class="team-container">
+            <div class="team-member">
+              <img src="/static/image/whai.jpg" alt="Whai">
+              <div class="team-info">
+                <h3>Whai</h3>
+                <p>Kannawat Sriputto</p>
+                    <button><a href="https://github.com/KannawatSriputto09" target="_blank">Contact</a></button>
+              </div>
+            </div>
+
+            <div class="team-member">
+              <img src="/static/image/peem.jpg" alt="Peem">
+              <div class="team-info">
+                <h3>Peem</h3>
+                <p>Natachai Kongnork</p>
+                    <button><a href="https://github.com/67070046-Natachai" target="_blank">Contact</a></button>
+              </div>
+            </div>
+
+            <div class="team-member">
+              <img src="/static/image/462554873_872053887978377_5078070492231550562_n.jpg" alt="Golf">
+              <div class="team-info">
+                <h3>Golf</h3>
+                <p>Teerut Satapornwanit</p>
+                    <button><a href="https://github.com/PDR160S" target="_blank">Contact</a></button>
+              </div>
+            </div>
+
+            <div class="team-member">
+              <img src="/static/image/kengg.jpg" alt="Keng">
+              <div class="team-info">
+                <h3>Keng</h3>
+                <p>Neti Watcharaphum</p>
+                    <button><a href="https://github.com/Neti67070093" target="_blank">Contact</a></button>
+              </div>
+            </div>
+        </div>
+
+        <script>//เวลา//
+            function updateThaiTime() {
+                const options = { timeZone: 'Asia/Bangkok', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+                const formatter = new Intl.DateTimeFormat([], options);
+                const timeString = formatter.format(new Date());
+                document.getElementById('thai-time').innerText = `${timeString}`;
+            }
+            setInterval(updateThaiTime, 1000);
+            updateThaiTime();
+        </script>
+
+    <script> //3เหลี่ยม
+    const triangle = document.getElementById('triangle');
+    const aboutLink = document.querySelector('nav ul li:nth-child(1) a');
+    const contactLink = document.querySelector('nav ul li:nth-child(2) a');
+
+    function updateTriangle() {
+        const aboutSection = document.getElementById('about');
+        const contactSection = document.getElementById('contact');
+
+        const aboutOffset = aboutSection.getBoundingClientRect();
+        const contactOffset = contactSection.getBoundingClientRect();
+
+        if (aboutOffset.top <= window.innerHeight && aboutOffset.bottom >= 0) {
+            const aboutPosition = aboutLink.getBoundingClientRect().left;
+            triangle.style.left = `${aboutPosition + aboutLink.offsetWidth / 2 - 20}px`;
+        } else if (contactOffset.top <= window.innerHeight && contactOffset.bottom >= 0) {
+            const contactPosition = contactLink.getBoundingClientRect().left;
+            triangle.style.left = `${contactPosition + contactLink.offsetWidth / 2 - 20}px`;
+        }
+    }
+    window.addEventListener('scroll', updateTriangle);
+    updateTriangle();
+    function addSubject() {
+        const subjectContainer = document.getElementById('subject-container');
+        const newEntry = document.createElement('div');
+        newEntry.classList.add('subject-entry');
+        newEntry.innerHTML = `
+            <p>ชื่อวิชา:</p>
+            <input type="text" name="subject[]" placeholder="ชื่อวิชา" required />
+            <p>คะแนน:</p>
+            <input type="text" name="cal[]" placeholder="คะแนน" min="0" max="100" required />
+        `;
+        subjectContainer.appendChild(newEntry);
+    }
+    // กำหนดเวลาถอน ปปปป-ดด-วว T โมง:นาที:วินาที
+    const targetDate = new Date("2024-12-31T23:59:59").getTime();
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const timeLeft = targetDate - now;
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        document.getElementById("countdown").innerHTML = 
+            `เหลือเวลาอีกในการถอนอีก ${days} วัน : ${hours} ชั่วโมง : ${minutes} นาที : ${seconds} วินาที`;
+        if (timeLeft < 0) {
+            document.getElementById("countdown").innerHTML = "หมดเวลา!";
+            clearInterval(countdownInterval);
+        }
+    }
+    const countdownInterval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+</script>
+        <footer>
+            <p>Handsomeslip</p>
+         </footer>
+    </form>
+</body>
+</html>
